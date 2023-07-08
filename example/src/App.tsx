@@ -1,29 +1,3 @@
-# @capitual/react-native-store-review
-
-### App review adapter to React Native.
-#### **only works on android for native option**
-<hr />
-
-## Introduction
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-<hr/>
-
-## Installation
-
-```sh
-npm install @capitual/react-native-store-review
-```
-
-<hr/>
-
-## Usage
-
-```tsx
 import * as React from 'react';
 import {
   openCustomReview,
@@ -57,7 +31,7 @@ const styles = StyleSheet.create({
 export default function App() {
   const handleOpenCustomReview = () => {
     try {
-      openCustomReview('IOS_APP_ID', 'ANDROID_APP_ID');
+      openCustomReview('id1458793819', 'com.capitual');
     } catch (e) {
       Alert.alert('Error on open  Custom Review');
     }
@@ -82,21 +56,3 @@ export default function App() {
     </View>
   );
 }
-
-```
-
-<hr/>
-
-## Contributing
-
-See the [contributing guide](./CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-<hr/>
-
-## License
-
-[MIT License](./LICENSE). 🙂
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob). 😊
