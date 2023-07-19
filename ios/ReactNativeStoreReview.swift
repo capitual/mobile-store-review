@@ -1,8 +1,20 @@
+import Foundation
+import UIKit
+import StoreKit
+
 @objc(ReactNativeStoreReview)
 class ReactNativeStoreReview: NSObject {
 
-  @objc(multiply:withB:withResolver:withRejecter:)
-  func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-    resolve(a*b)
+  @objc
+  func requestReview () -> Void {
+
+    if #available(iOS 10.3, *) {
+        SKStoreReviewController.requestReview()
+    } 
+  }
+
+  @objc
+  func constantsToExport() -> [String: Any]! {
+    return ["isAvailable":  (NSClassFromString("SKStoreReviewController") != nil)  ? (true) : (false)]
   }
 }
