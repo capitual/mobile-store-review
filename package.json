@@ -1,6 +1,6 @@
 {
   "name": "@capitual/react-native-store-review",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "App in review adapter to React Native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
